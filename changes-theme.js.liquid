@@ -1,0 +1,65 @@
+find this line* OR Add this line below this line
+mediaQueryLarge     : 'screen and (min-width: 769px)',
+
+replace with this*
+mediaQueryLarge     : 'screen and (min-width: 769px)',
+mediaQueryXLarge    : 'screen and (max-width: 2100px)',
+
+/*
+// Breakpoints from src/stylesheets/global/variables.scss.liquid
+mediaQuerySmall     : 'screen and (max-width: 590px)',
+mediaQueryMedium    : 'screen and (min-width: 591px) and (max-width: 768px)',
+mediaQueryMediumUp  : 'screen and (min-width: 591px)',
+mediaQueryLarge     : 'screen and (min-width: 769px)',
+mediaQueryXLarge    : 'screen and (max-width: 2100px)',
+bpSmall             : false
+*/
+
++++++++++++++++++++++++++++++++++++++++++++
+
+find this line*
+enquire.register(theme.variables.mediaQuerySmall, {
+
+replace with this*
+enquire.register(theme.variables.mediaQueryXLarge, {
+
+/*
+if (!$('html').hasClass('lt-ie9')) {
+        enquire.register(theme.variables.mediaQueryXLarge, { //mediaQuerySmall
+          match: function() {
+            self.createImageCarousel();
+            if (self.zoomType) {
+              if ($(self.selectors.productImagePhoto).length) {
+                // remove event handlers for product zoom on mobile
+                $(self.selectors.productImagePhoto).off();
+              }
+            }
+          },
+          unmatch: function() {
+            self.destroyImageCarousel();
+            if (self.zoomType) {
+              // reinit product zoom
+              self.productImageZoom();
+            }
+          }
+        });
+}
+*/
+
++++++++++++++++++++++++++
+
+Change dots variable from true to false*
+like this
+*  dots: true,
+
+/*
+$(this.selectors.productImages).slick({
+        arrows: false,
+        dots: true,
+        adaptiveHeight: true,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 6000
+        
+});
+*/
