@@ -1,0 +1,1 @@
+# brooklyn-slider-in-product-page
