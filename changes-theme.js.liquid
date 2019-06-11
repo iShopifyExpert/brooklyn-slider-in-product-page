@@ -63,3 +63,12 @@ $(this.selectors.productImages).slick({
         
 });
 */
+
++++++++++++++++++++++++++++++++++++++++++++
+Variant image change for desktop changes
+
+find this line*
+$newImage.parent().prependTo($(this.selectors.productImages));
+
+replace with this*
+if (imageIndex !== 0 || theme.variables.productPageLoad) { $(this.selectors.productImages).slickGoTo(imageIndex); }
